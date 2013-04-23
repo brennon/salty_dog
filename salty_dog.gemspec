@@ -8,10 +8,11 @@ Gem::Specification.new do |s|
   s.email                    = 'brennon@brennonbortz.com'
   s.files                    = ['lib/salty_dog.rb','lib/salty_dog/salty_dog.rb']
   s.require_paths            = ['lib']
-  s.homepage                 = 'http://rubygems.org/gems/salty_dog'
-  s.add_dependencies         = ['openssl']
+  s.homepage                 = 'http://github.com/brennon/salty_dog'
   s.license                  = 'BSD-3'
-  s.development_dependencies = ['simplecov','turn']
   s.rdoc_options             = ['--main','README.md']
+
+  s.add_development_dependency 'simplecov', '~> 0.7.1'
+  s.add_development_dependency 'turn', '~> 0.9.6'
 end
 
