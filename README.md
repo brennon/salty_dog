@@ -2,7 +2,7 @@
 
 ## Description ##
 
-SaltyDog is a pure-Ruby implementation of PBKDF2 (password-based key derivation function), as set forth in [PKCS #5: Password-Based Cryptography Standard](http://www.rsa.com/rsalabs/node.asp?id=2127) from RSA Laboratories. PKCS #5 is also under review by the IETF as a potential standard.
+SaltyDog is a pure-Ruby implementation of PBKDF2 (a password-based key derivation function), as set forth in [PKCS #5: Password-Based Cryptography Standard](http://www.rsa.com/rsalabs/node.asp?id=2127) from RSA Laboratories. PKCS #5 is also under review by the IETF as a potential standard.
 
 Other Ruby implementations of PBKDF2 do exist. However, customizing input parameters to the PBKDF is not as straightforward as one might hope. SaltyDog allows easy customization of hashing scheme, iterations, and other parameters to the function.
 
