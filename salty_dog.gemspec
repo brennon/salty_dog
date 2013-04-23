@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name                     = 'salty_dog'
-  s.version                  = '0.1.1'
+  s.version                  = '0.1.2'
   s.date                     = '2013-04-21'
   s.summary                  = 'PBKDF2, Ruby-style'
   s.description              = 'A complete, RFC compliant implementation of PBKDF2. As opposed to other PBKDF2 gems, all parameters to the key-derivation function are completely and easily customizable.'
