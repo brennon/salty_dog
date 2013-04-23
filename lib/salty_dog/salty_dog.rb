@@ -44,7 +44,7 @@ module SaltyDog
       @l = (@length / @digest.length).ceil
       @r = @length - (@l - 1) * @digest.length
 
-      self.calculate_key(@digest, options[:password], options[:salt], @l, @r, @iterations).unpack('H*')[0]
+      self.calculate_key(@digest, options[:password].to_s, options[:salt].to_s, @l, @r, @iterations).unpack('H*')[0]
     end
 
     ##
