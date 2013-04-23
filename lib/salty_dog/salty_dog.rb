@@ -7,7 +7,7 @@ module SaltyDog
   # function outlined in PKCS[http://www.rsa.com/rsalabs/node.asp?id=2127] #5: Password-Based Cryptography Standard. PBKDF1, as set 
   # forth in the same document, has been recommended for removal from use, and
   # thus is not implemented in SaltyDog. If you just need to generate keys,
-  # skip down to ::digest.
+  # skip down to ::digest:
 
   class PBKDF2
 
