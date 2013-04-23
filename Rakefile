@@ -10,7 +10,7 @@ end
 desc 'Run tests'
 
 RDoc::Task.new do |rdoc|
-  rdoc.main = 'README.rdoc'
+  rdoc.main = 'README.md'
   rdoc.rdoc_files.include('README.md', 'LICENSE.md', 'lib/**/*.rb')
   rdoc.options << '--all'
 end

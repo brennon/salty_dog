@@ -30,7 +30,7 @@ Generate an 80-byte key with the input password +pa55word+ and salt +NaCl+ using
 
 ## License ##
 
-SaltyDog is Copyright 2013 Brennon Bortz. SaltyDog is free software, and may be redistributed under the terms specified in LICENSE.md.
+SaltyDog is Copyright © 2013 Brennon Bortz. SaltyDog is free software, and may be redistributed under the terms specified in LICENSE.md.
 
 ## Warranty ##
 
