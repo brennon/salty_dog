@@ -44,7 +44,13 @@ module SaltyDog
       @l = (@length / @digest.length).ceil
       @r = @length - (@l - 1) * @digest.length
 
-      self.calculate_key(@digest, options[:password].to_s, options[:salt].to_s, @l, @r, @iterations).unpack('H*')[0]
+      self.calculate_key(@digest, 
+        options[:password].to_s, 
+        options[:salt].to_s, 
+        @l, 
+        @r, 
+        @iterations
+      ).unpack('H*')[0]
     end
 
     ##
@@ -71,7 +77,12 @@ module SaltyDog
     
     def self.check_key_length_requirements(length)
       raise PBKDF2Error, 'A key length must be provided' if !length
-      raise PBKDF2Error, 'Desired key is too long' if ((2**32 - 1) * @digest.length) < length
+
+      raise(
+        PBKDF2Error, 
+        'Desired key is too long'
+      ) if ((2**32 - 1) * @digest.length) < length
+
       raise PBKDF2Error, 'Desired key length must be positive' if length < 0
     end
 
@@ -83,7 +94,10 @@ module SaltyDog
     # Returns a string of bytes representing the XORed value.
 
     def self.xor(x, y)
-      raise PBKDF2Error, 'XOR arguments are not the same length' if x.length - y.length != 0 
+      raise(
+        PBKDF2Error, 
+        'XOR arguments are not the same length'
+      ) if x.length - y.length != 0 
       output = "".encode('ASCII-8BIT')
 
       x.bytes.zip(y.bytes) { |x,y| output << (x^y) }
